@@ -16,8 +16,9 @@ RUN rm -f /etc/apache2/mods-enabled/mpm_event.conf \
 
 COPY . /var/www/html/
 
-# Remove default Apache page AFTER copying files
 RUN rm -f /var/www/html/index.html
+
+RUN echo "DirectoryIndex index.php index.html" > /etc/apache2/mods-enabled/dir.conf
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
