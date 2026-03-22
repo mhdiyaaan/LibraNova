@@ -14,9 +14,10 @@ RUN rm -f /etc/apache2/mods-enabled/mpm_event.conf \
     && ln -sf /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/ \
     && ln -sf /etc/apache2/mods-available/mpm_prefork.load /etc/apache2/mods-enabled/
 
-COPY . /var/www/html/
-
+# Remove default Apache page
 RUN rm -f /var/www/html/index.html
+
+COPY . /var/www/html/
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
