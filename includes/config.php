@@ -1,10 +1,10 @@
 <?php
 // Database Configuration
-define('DB_HOST', 'YOUR_MYSQLHOST');
-define('DB_USER', 'YOUR_MYSQLUSER');
-define('DB_PASS', 'YOUR_MYSQLPASSWORD');
-define('DB_NAME', 'YOUR_MYSQLDATABASE');
-define('DB_PORT', YOUR_MYSQLPORT);
+define('DB_HOST', 'mysql.railway.internal');
+define('DB_USER', 'root');
+define('DB_PASS', 'sBMPCoJxziUEIRlpYNaPtpKQmXYJyXaR');
+define('DB_NAME', 'railway');
+define('DB_PORT', 3306);
 
 // Fine per day in currency
 define('FINE_PER_DAY', 2.00);
