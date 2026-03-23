@@ -4,7 +4,7 @@ define('DB_HOST', getenv('MYSQLHOST') ?: 'localhost');
 define('DB_USER', getenv('MYSQLUSER') ?: 'root');
 define('DB_PASS', getenv('MYSQLPASSWORD') ?: '');
 define('DB_NAME', getenv('MYSQLDATABASE') ?: 'library_db');
-define('DB_PORT', getenv('MYSQLPORT') ?: 3306);
+define('DB_PORT', (int)(getenv('MYSQLPORT') ?: 3306));
 
 // Fine per day in currency
 define('FINE_PER_DAY', 2.00);
