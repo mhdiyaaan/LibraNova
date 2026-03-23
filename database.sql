@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS issued_books (
 
 -- Default Admin User (password: Admin@123)
 INSERT INTO users (name, email, password, role, status) VALUES 
-('Library Admin', 'admin@library.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'active');
+('Library Admin', 'admin@library.com', '$2y$10$SlmmMLBabWENrRn5V/WnTOsZjXUR.YqU9xORkYVSciLoNtz74Cw7G', 'admin', 'active');
 
 -- Sample Books
 INSERT INTO books (title, author, category, isbn, publication_year, publisher, description, total_quantity, available_copies) VALUES
@@ -73,8 +73,4 @@ INSERT INTO books (title, author, category, isbn, publication_year, publisher, d
 ('Brave New World', 'Aldous Huxley', 'Dystopian', '9780060850524', 1932, 'Chatto & Windus', 'A futuristic World State of genetically modified citizens.', 4, 4),
 ('The Catcher in the Rye', 'J.D. Salinger', 'Fiction', '9780316769174', 1951, 'Little, Brown', 'The story of Holden Caulfield, a teenager navigating adulthood.', 3, 3);
 
--- Note: Default admin password is 'password' (this is the Laravel default hash for testing)
--- For production, use: password_hash('Admin@123', PASSWORD_BCRYPT)
--- Update admin password with proper hash:
-UPDATE users SET password = '$2y$10$TKh8H1.PfDffdUw0CNgK4OlHFRKBa9B3MHFGFKGCdBLMPgEwHRFKi' WHERE email = 'admin@library.com';
 -- Admin login: admin@library.com / Admin@123
